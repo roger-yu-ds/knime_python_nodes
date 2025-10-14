@@ -21,24 +21,24 @@ class TemplateNode:
 
     ### Tutorial step 10: Uncomment all of the following parameters and the 'is_numeric' method to create your first dialogue ###
     # (Restart KAP and drag&drop the node again from the node repository to let changes take effect)
-    # some_param = knext.IntParameter("Some Int Parameter", "The answer to everything", 42, min_value=0)
+    some_param = knext.IntParameter("Some Int Parameter", "The answer to everything", 42, min_value=0)
 
-    # another_param = knext.StringParameter("Some String parameter", "The classic placeholder", "foobar")
+    another_param = knext.StringParameter("Some String parameter", "The classic placeholder", "foobar")
 
-    # double_param = knext.DoubleParameter("Double Parameter", "Just for test purposes", 3.0)
+    double_param = knext.DoubleParameter("Double Parameter", "Just for test purposes", 3.0)
 
-    # boolean_param = knext.BoolParameter("Boolean Parameter", "also just for testing", True)
+    boolean_param = knext.BoolParameter("Boolean Parameter", "also just for testing", True)
 
-    # column_param = knext.ColumnParameter()
+    column_param = knext.ColumnParameter()
 
-    # def is_numeric(column):  # Filter columns visible in the column_param for numeric ones
-    #     return (
-    #         column.ktype == knext.double()
-    #         or column.ktype == knext.int32()
-    #         or column.ktype == knext.int64()
-    #     )
+    def is_numeric(column):  # Filter columns visible in the column_param for numeric ones
+        return (
+            column.ktype == knext.double()
+            or column.ktype == knext.int32()
+            or column.ktype == knext.int64()
+        )
 
-    # column_param = knext.ColumnParameter(label="label", description="description", port_index=0, column_filter=is_numeric)
+    column_param = knext.ColumnParameter(label="label", description="description", port_index=0, column_filter=is_numeric)
 
     def configure(self, configure_context, input_schema_1):
         # def configure(self, configure_context, input_schema_1, input_schema_2):  ### Tutorial step 11: Uncomment to configure the new port (and comment out the previous configure header)

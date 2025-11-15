@@ -1,5 +1,24 @@
 # ![Image](https://www.knime.com/sites/default/files/knime_logo_github_40x40_4layers.png) KNIME® -  KNIME PYTHON EXTENSION TEMPLATE
 
+## Bugs
+
+Contrary to the official documentation, there are several differences to make the node appear in KNIME.
+
+`knime.yaml`:
+
+```yaml
+    ...
+    extension_module: src.extension # Instead of /src/extension
+```
+
+`config.yaml`:
+
+```yaml
+com.tal.pricing_automation:
+    src: D:/git/knime_python_nodes # Instead of D:/git/knime_python_nodes/src
+    ...
+```
+
 [![CI](https://github.com/knime/knime-python-extension-template/actions/workflows/ci.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/ci.yml) [![Code Quality Check](https://github.com/knime/knime-python-extension-template/actions/workflows/code-quality-check.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/code-quality-check.yml)
 [![Extension Bundling](https://github.com/knime/knime-python-extension-template/actions/workflows/bundle-extension.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/bundle-extension.yml)
 

@@ -19,6 +19,12 @@ com.tal.pricing_automation:
     ...
 ```
 
+❗ Note that the `extension.py` file needs to be in `{root}/src`, otherwise KNIME won't be able to find it; e.g. I tried moving the file to `{root}/src/knime_extensions/extension.py` with:
+* `extension_module: src.knime_extensions.extension`
+* `src: D:/git/knime_python_nodes/src/` and `src: D:/git/knime_python_nodes/src/knime_extension/`
+
+but all failed.
+
 [![CI](https://github.com/knime/knime-python-extension-template/actions/workflows/ci.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/ci.yml) [![Code Quality Check](https://github.com/knime/knime-python-extension-template/actions/workflows/code-quality-check.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/code-quality-check.yml)
 [![Extension Bundling](https://github.com/knime/knime-python-extension-template/actions/workflows/bundle-extension.yml/badge.svg)](https://github.com/knime/knime-python-extension-template/actions/workflows/bundle-extension.yml)
 
